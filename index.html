@@ -327,10 +327,6 @@ Language barriers have an influence on how non-native speakers (NNES) understand
 
                     <li>Prather, J. et al. (2017) ‘Students’ Natural Language Use in Programming.’ Available at: <a href="https://doi.org/10.1145/3017680.3017769" target="_blank">https://doi.org/10.1145/3017680.3017769</a>.</li>
                 </ol>
-            </section>
-
-            <div class="word-count">
-                Word count (main article only): <span id="wordCountValue">...</span>
             </div>
 
         </article>
@@ -389,6 +385,30 @@ Language barriers have an influence on how non-native speakers (NNES) understand
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
+     /* -----------------------------------------
+       TOTAL WORD COUNT (Entire Article Body)
+    ----------------------------------------- */
+    function calculateTotalWordCount() {
+        const article = document.getElementById("article-body");
+        const text = article.innerText.trim();
+        const words = text.split(/\s+/).filter(Boolean).length;
+
+        document.getElementById("totalWordCount").innerText =
+            `Total word count: ${words}`;
+    }
+
+    /* -----------------------------------------
+       RUN BOTH FUNCTIONS ON PAGE LOAD
+    ----------------------------------------- */
+    window.onload = function () {
+        getLastUpdatedTime();
+        calculateTotalWordCount();
+    };
+</script>
+
+<!-- Word Count Display -->
+<p id="totalWordCount" style="font-size:0.9rem; color:#555; margin-top:10px;"></p>
+<hr>
 
 
  <!-- //////////////////////////////////////////////////////////////////////////////// -->
