@@ -1,257 +1,200 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Challenges faced by non-native English speaking students in computer science education due to linguistic barriers.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Challenges faced by non-native English speaking students in computer science education due to linguistic barriers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            margin:0;
-            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-            background: radial-gradient(circle at top, #f4fbff 0, #e4f0ff 40%, #dde7ff 70%, #c9d4ff 100%);
-            color:#102033;
-        }
-        .banner{
-            width:100%;
-            max-height:140px;
-            object-fit:cover;
-            display:block;
-        }
-        .page-wrapper{
-            max-width:1100px;
-            margin:20px auto 40px auto;
-            padding:25px 30px 40px 30px;
-            background:white;
-            box-shadow:0 8px 25px rgba(0,0,0,0.12);
-            border-radius:12px;
-        }
-        h1,h2,h3,h4{
-            font-family:"Segoe UI Semibold", system-ui, sans-serif;
-            color:#112244;
-        }
-        h1{
-            font-size:1.8rem;
-            margin-bottom:0.2rem;
-        }
-        .meta{
-            font-size:0.9rem;
-            color:#4b5c79;
-            margin-bottom:0.8rem;
-        }
-        .badge{
-            display:inline-block;
-            padding:3px 9px;
-            border-radius:999px;
-            font-size:0.7rem;
-            letter-spacing:0.03em;
-            text-transform:uppercase;
-            background:#e4ecff;
-            color:#1f3b66;
-            margin-right:0.4rem;
-        }
-        hr{
-            border:0;
-            border-top:1px solid #d0d7e5;
-            margin:1.2rem 0;
-        }
-        table.toc{
-            width:100%;
-            border-collapse:collapse;
-            margin:0.8rem 0 1.2rem 0;
-            font-size:0.95rem;
-        }
-        table.toc th,
-        table.toc td{
-            padding:6px 10px;
-            border:1px solid #c2cce2;
-        }
-        table.toc th{
-            background:#f1f5ff;
-            text-align:left;
-        }
-        .section{
-            margin-bottom:1.3rem;
-            line-height:1.55;
-            font-size:0.98rem;
-        }
-        .sub-heading{
-            margin-top:0.9rem;
-            margin-bottom:0.25rem;
-            font-weight:600;
-        }
-        figure{
-            margin:1.2rem auto;
-            text-align:center;
-        }
-        figure img{
-            max-width:100%;
-            border-radius:8px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.18);
-        }
-        figure figcaption{
-            font-size:0.9rem;
-            color:#36405c;
-            margin-top:0.4rem;
-        }
-        .table-caption{
-            font-size:0.9rem;
-            color:#36405c;
-            text-align:center;
-            margin-bottom:0.7rem;
-        }
-        .reference-list{
-            font-size:0.9rem;
-            line-height:1.5;
-        }
-        .reference-list li{
-            margin-bottom:0.4rem;
-        }
-        .footer-bar{
-            margin-top:1.3rem;
-            padding-top:0.6rem;
-            border-top:1px dashed #b8c4df;
-            font-size:0.83rem;
-            color:#5a6886;
-            display:flex;
-            flex-wrap:wrap;
-            gap:0.8rem;
-            justify-content:space-between;
-        }
-        .chip{
-            background:#f3f6ff;
-            border-radius:999px;
-            padding:3px 10px;
-        }
-        a{
-            color:#004f9e;
-        }
-        a:hover{
-            color:#002b5c;
-        }
-    </style>
-
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background: #ffffff;
+        color: #222;
+    }
+    header {
+        background: #0d1b2a;
+        padding: 15px 20px;
+        color: white;
+    }
+    header img {
+        max-height: 70px;
+        vertical-align: middle;
+    }
+    header .urn {
+        font-size: 0.9rem;
+        margin-top: 5px;
+        opacity: 0.9;
+    }
+    main {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 20px;
+    }
+    h1, h2, h3 {
+        color: #0d1b2a;
+    }
+    .toc table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .toc th, .toc td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    figure {
+        margin: 20px auto;
+        text-align: center;
+    }
+    figure img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+    }
+    figcaption {
+        font-size: 0.9rem;
+        margin-top: 5px;
+        color: #444;
+    }
+    .references li {
+        margin-bottom: 6px;
+    }
+    a {
+        color: #0a4da3;
+    }
+</style>
 </head>
+
 <body>
 
-<img src="WebBanner2023.png" alt="University of Surrey Banner" class="banner">
+<header>
+    <img src="WebBanner2023.png" alt="University of Surrey Banner">
+    <div class="urn">Student URN: 6936865</div>
+</header>
 
-<div class="page-wrapper">
+<main>
 
-    <h1>ENG0018 Conference Article</h1>
-    <div class="meta">
-        <span class="badge">University of Surrey</span>
-        <span class="badge">Foundation Year</span>
-        <span>Student Name: <em>Your Name Here</em> &nbsp; | &nbsp; URN: <em>6936865</em></span>
-    </div>
+<h1>ENG0018 Conference Article</h1>
+<h2>Challenges faced by non-native English speaking students in computer science education due to linguistic barriers.</h2>
 
-    <hr>
+<!-- TABLE OF CONTENTS -->
+<h3>Contents</h3>
+<div class="toc">
+<table>
+    <tr><th>Section</th><th>Link</th></tr>
+    <tr><td>Abstract</td><td><a href="#abstract">Abstract</a></td></tr>
+    <tr><td>Introduction</td><td><a href="#introduction">Introduction</a></td></tr>
+    <tr><td>Language Hurdles in Learning Programming</td><td><a href="#hurdles">Language Hurdles</a></td></tr>
+    <tr><td>Reported English-Related Barriers</td><td><a href="#barriers">Reported Barriers</a></td></tr>
+    <tr><td>Improving CS Education</td><td><a href="#improving">Improving CS Education</a></td></tr>
+    <tr><td>Conclusions</td><td><a href="#conclusions">Conclusions</a></td></tr>
+    <tr><td>References</td><td><a href="#references">References</a></td></tr>
+</table>
+</div>
 
-    <h2 id="top">Challenges faced by non-native English speaking students in computer science education due to linguistic barriers.</h2>
+<hr>
 
-    <h3>Contents</h3>
-    <table class="toc">
-        <tr>
-            <th>Section</th>
-            <th>Link</th>
-        </tr>
-        <tr><td>Abstract</td><td><a href="#abstract">Go</a></td></tr>
-        <tr><td>Introduction</td><td><a href="#introduction">Go</a></td></tr>
-        <tr><td>Language Hurdles</td><td><a href="#language-hurdles">Go</a></td></tr>
-        <tr><td>Reported Barriers</td><td><a href="#reported-barriers">Go</a></td></tr>
-        <tr><td>Improving Education</td><td><a href="#improving">Go</a></td></tr>
-        <tr><td>Conclusions</td><td><a href="#conclusions">Go</a></td></tr>
-        <tr><td>References</td><td><a href="#references">Go</a></td></tr>
-    </table>
+<h3 id="abstract">Abstract</h3>
+<p>
+Computer science (CS) education has become a popular choice for students with different native languages and yet most computer programming languages, course materials, and educational environments continue to be based on the English language. This paper identifies challenges faced by non-native English speakers (NNES) related to studying computer science through an analysis of several studies concerning programming transfer, documentation comprehension, terminology knowledge, and cognitive load; the results indicate NNES experience difficulties with understanding programming concepts, interpreting error messages, and transitioning to text-based programming due to limitations with their English language skills, lack of familiarity with technical terminology, and dependency of the programming languages syntax on English. Additionally, this paper uses a table from a multi-case study conducted by Alaofi (2025) to identify the most common English language problems. The final portion of this paper provides suggestions for improving teaching methods and course materials to assist in reducing inequities and increasing participation in computing by a broader audience.
+</p>
 
-    <hr>
+<hr>
 
-    <!-- ABSTRACT -->
-    <h3 id="abstract">Abstract</h3>
-    <div class="section">
-        Computer science (CS) education has become a popular choice for students with different native languages and yet most computer programming languages, course materials, and educational environments continue to be based on the English language. This paper identifies challenges faced by non-native English speakers (NNES) related to studying computer science through an analysis of several studies concerning programming transfer, documentation comprehension, terminology knowledge, and cognitive load; the results indicate NNES experience difficulties with understanding programming concepts, interpreting error messages, and transitioning to text-based programming due to limitations with their English language skills, lack of familiarity with technical terminology, and dependency of the programming languages syntax on English. Additionally, this paper uses a table from a multi-case study conducted by Alaofi (2025) to identify the most common English language problems. The final portion of this paper provides suggestions for improving teaching methods and course materials to assist in reducing inequities and increasing participation in computing by a broader audience.
-    </div>
+<h3 id="introduction">Introduction</h3>
+<p>
+English has become an increasingly dominant programming language globally, despite the rapid development of education of computing around the world (<a href="#ref-guo">Guo, 2018</a>). To non-English native speaker (NNES) students, this is a huge barrier. Beyond basic syntax and logical thinking, NNES have to interpret unfamiliar terms, follow English language instruction in class and be able to understand the error message written for English native speakers (<a href="#ref-becker">Becker, 2019</a>). Programming languages are embedded with English grammar and vocabulary, thus, the ability to speak English will significantly affect the student's ability to succeed in introductory courses (<a href="#ref-becker">Becker, 2019</a>). CS1 classes typically assume English fluency for students regardless of whether English is used in daily educational settings (<a href="#ref-alaofi">Alaofi, 2025</a>). Understanding these difficulties is critical for developing an inclusive education model for CS.
+</p>
 
-    <!-- MAIN TEXT -->
-    <div id="Introduction_InText">
+<h3 id="hurdles">Language Hurdles in Learning Programming</h3>
 
-        <h3 id="introduction">Introduction</h3>
-        <div class="section">
-            English has become an increasingly dominant programming language globally, despite the rapid development of education of computing around the world (Guo, 2018). To non-English native speaker (NNES) students, this is a huge barrier. Beyond basic syntax and logical thinking, NNES have to interpret unfamiliar terms, follow English language instruction in class and be able to understand the error message written for English native speakers (Becker, 2019). Programming languages are embedded with English grammar and vocabulary, thus, the ability to speak English will significantly affect the student's ability to succeed in introductory courses (Becker, 2019). CS1 classes typically assume English fluency for students regardless of whether English is used in daily educational settings (Alaofi, 2025). Understanding these difficulties is critical for developing an inclusive education model for CS.
-        </div>
+<h4>1.1 Structure and Terms Specific to the Language</h4>
+<p>
+Programming languages such as Python, Java, and C++ include English specific words and phrases such as "if", "else" and "return" that do not translate meaningfully into other languages (<a href="#ref-becker">Becker, 2019</a>). <a href="#ref-guo">Guo (2018)</a> identified that NNES face challenges related to reading instructional material and programming elements including identifiers and abbreviations. <a href="#ref-alaofi">Alaofi (2025)</a> noted that a lack of knowledge regarding common computer terminology was highly correlated with poor CS1 performance. <a href="#ref-prather">Prather et al. (2017)</a> demonstrated that learners utilize natural language reasoning when reading code, and that NNES have less effective reasoning than English native speakers.
+</p>
 
-        <h3 id="language-hurdles">Language Hurdles in Learning Programming</h3>
+<h4>1.2 Increased Cognitive Overload</h4>
+<p>
+The additional mental burden of having to overcome linguistic barriers adds to the cognitive overload experienced by NNES while solving logical programming problems (<a href="#ref-espinal">Espinal et al., 2023</a>). Translating code into a student's native language uses up the working memory needed to solve programming problems. Also, the fear of asking questions incorrectly due to not being proficient causes NNES to refrain from seeking help. <a href="#ref-espinal">Espinal et al. (2023)</a> documented how NNES students were unable to effectively describe code based on English structures and expressions during their transition from Scratch to Python.
+</p>
 
-        <div class="section">
-            <div class="sub-heading">1.1 Structure and Terms Specific to the Language</div>
-            Programming languages such as Python, Java, and C++ include English specific words and phrases such as "if", "else" and "return" that do not translate meaningfully into other languages (Becker, 2019). Guo (2018) identified that NNES face challenges related to reading instructional material and programming elements including identifiers and abbreviations. Alaofi (2025) noted that a lack of knowledge regarding common computer terminology was highly correlated with poor CS1 performance. Prather et al. (2017) demonstrated that learners utilize natural language reasoning when reading code, and that NNES have less effective reasoning than English native speakers.
-        </div>
+<h4>1.3 Barriers to Class Communication</h4>
+<p>
+<a href="#ref-alaofi">Alaofi (2025)</a> found that students had difficulty asking questions in class due to fear of incorrect English usage, reducing opportunities for assistance. Similarly, <a href="#ref-guo">Guo (2018)</a> noted that students were hesitant to engage in online discussion forums due to fear of misinterpreting technical English or using incorrect terminology.
+</p>
 
-        <div class="section">
-            <div class="sub-heading">1.2 Increased Cognitive Overload</div>
-            The additional mental burden of having to overcome linguistic barriers adds to the cognitive overload experienced by NNES while solving logical programming problems (Espinal et al., 2023). Translating code into a student's native language uses up the working memory needed to solve programming problems (Lye & Koh, 2014, as referenced in Espinal et al., 2023). Also, the fear of asking questions incorrectly due to not being proficient causes NNES to refrain from seeking help. Espinal et al. (2023) documented how NNES students were unable to effectively describe code based on English structures and expressions during their transition from Scratch to Python. Therefore, transitioning from visual programming to text-based programming increases the difficulties associated with language related barriers and lowers the confidence of NNES students.
-        </div>
+<h3 id="barriers">Reported English-Related Barriers Affecting CS1 Learning</h3>
 
-        <div class="section">
-            <div class="sub-heading">1.3 Barriers to Class Communication</div>
-            Alaofi (2025) conducted a multi-case study of students attending English-medium CS1 classes in China and Saudi Arabia and found that students had difficulty asking questions in class due to their fears of not using proper English resulting in reduced opportunities for assistance and increased disengagement. Similarly, Guo (2018) noted that students were hesitant to engage in online discussion forums to seek peer assistance and advice due to the fear of misinterpreting technical English or using incorrect terminology.
-        </div>
+<p>
+Alaofi (2025) conducted a study involving over 300 students from China and Saudi Arabia to identify how English proficiency, terminology knowledge, and anxiety affect CS1 performance. Results from the Chinese case study (<a href="#table1">Table 1</a> and <a href="#figure1">Figure 1</a>) identified four primary English-related barriers.
+</p>
 
-        <h3 id="reported-barriers">Reported English-Related Barriers Affecting CS1 Learning</h3>
+<p>
+According to Table 1, 50% of students encountered difficulty reading English, 27% encountered difficulty with CS-specific vocabulary, 23% had difficulty understanding programming concepts in English, and 20% struggled to translate English-based programs into their native language. Smaller percentages (13–10%) reported difficulty with English-based assignments and online materials. Figure 1 shows that 28–30% of students struggled with English-based error messages, IDE interfaces, and help commands. The findings indicate four major barriers: limited English proficiency, difficulty interpreting programming terminology, difficulty reading error messages, and difficulty applying English in CS contexts.
+</p>
 
-        <div class="section">
-            Alaofi (2025) conducted a study involving over 300 students from China and Saudi Arabia to identify how English proficiency, terminology knowledge, and anxiety affect CS1 performance. Results from the Chinese case study (Table 1 and Figure 1) identified four primary English-related barriers.
-        </div>
+<!-- TABLE 1 -->
+<figure id="table1">
+    <img src="Table 1.png" alt="English-related barriers table from Alaofi 2025">
+    <figcaption><strong>Table 1.</strong> English-related difficulty themes and percentage of responses (Alaofi, 2025).</figcaption>
+</figure>
 
-        <div class="section">
-            According to Table 1, 50% of students encountered difficulty reading English, 27% of students encountered difficulty with CS-specific vocabulary, 23% of students encountered difficulty understanding programming concepts presented in English, and 20% of students encountered difficulty translating English-based programs into their native language. Smaller percentages (13-10%) reported difficulty with English-based assignments and online materials. Figure 1 reveals that 28-30% of students encountered difficulty with English-based error messages, IDE interfaces, and help commands. Approximately 23% of students reported difficulty with programming keywords, approximately 16% of students reported difficulty coding with the English alphabet, and approximately 13% of students reported difficulty spelling. In total, the findings indicate that there are four major barriers: limited general and technical English proficiency, difficulty understanding programming concepts and terminology; difficulty interpreting English-based error messages and IDE interfaces; and difficulty applying English content in CS contexts.
-        </div>
+<!-- FIGURE 1 -->
+<figure id="figure1">
+    <img src="Figure 2 Large.png" alt="Bar chart from Alaofi showing English programming difficulties">
+    <figcaption><strong>Figure 1.</strong> Difficulties using English-based IDE features, keywords, and error messages (Alaofi, 2025).</figcaption>
+</figure>
 
-    </div>
+<h3 id="improving">Improving CS Education for NNES Students</h3>
+<p>
+To develop and support NNES learners, explicit support for terminology is necessary; terminology knowledge predicts performance in CS1 (<a href="#ref-alaofi">Alaofi, 2025</a>). Vocabulary activities, bilingual glossaries, simplified definitions, or inline dictionaries may support interpretation of documentation (<a href="#ref-guo">Guo, 2018</a>). Reducing cognitive load through visual tools, bilingual comments, and paired natural-language/code examples can also help (<a href="#ref-espinal">Espinal et al., 2023</a>). Low-stakes participation and inclusive, translated materials may help NNES learners engage more confidently.
+</p>
 
-    <!-- TABLE 1 (Your actual uploaded table) -->
-    <div id="table1">
-        <div class="table-caption"><strong>Table 1.</strong> English-related difficulties reported by Chinese CS1 students (adapted from Alaofi, 2025).</div>
+<h3 id="conclusions">Conclusions</h3>
+<p>
+Language barriers influence how NNES understand terminology, interpret error messages, participate in class, and transition into text-based programming. These barriers arise from structural linguistic dominance rather than learner inadequacy. Improved course design, multilingual materials, and terminology scaffolding can reduce cognitive burden and support more equitable computing education.
+</p>
 
-        <figure>
-            <img src="Table1.jpeg" alt="Table showing English-related barriers with percentages.">
-            <figcaption>Table 1. Reported English-related difficulty themes and percentage of responses.</figcaption>
-        </figure>
-    </div>
+<hr>
 
-    <!-- FIGURE 1 (Your actual uploaded figure) -->
-    <figure id="figure1">
-        <img src="Figure2.jpeg" alt="Bar chart showing English-related programming difficulties.">
-        <figcaption><strong>Figure 1.</strong> Difficulties using English-based IDE features, spelling, keywords, and error messages (adapted from Alaofi, 2025).</figcaption>
-    </figure>
+<h3 id="references">References</h3>
+<ol class="references">
 
-    <!-- REMAINING TEXT -->
-    <div id="Analysis_InText">
+    <li id="ref-alaofi">
+        Alaofi, S.A. (2025) <em>Investigating the impact of English proficiency and terminology knowledge on programming performance in introductory programming courses</em>. University College Dublin.  
+        Available at:  
+        <a href="http://hdl.handle.net/10197/30051" target="_blank">http://hdl.handle.net/10197/30051</a>
+    </li>
 
-        <h3 id="improving">Improving CS Education for NNES Students</h3>
-        <div class="section">
-            To develop and support NNES learners, there are intentional changes that can be made to both teaching and learning tools. Explicit support for terminology is necessary; terminology knowledge predicts performance in CS1 (Alaofi, 2025). Vocabulary activities, bilingual glossaries, simplified definitions or inline dictionaries in coding environments to help to interpret error messages and documentation, may provide an instructor with ways to help students understand terminology (Guo, 2018). The instructor can also reduce the cognitive load of students by using visual or block-based tools, bilingual comments, and paired natural language-code examples to facilitate the transition from a graphical interface to a text-based interface in programming (Espinal et al., 2023). Finally, low-stakes participation, small group discussion in the native language(s) of the learners and inclusive, translated materials will assist to engage NNES learners and to have them have equal access to computing science.
-        </div>
+    <li id="ref-becker">
+        Becker, B. (2019) ‘Parlez-vous Java? Bonjour La Monde != Hello World’, PPIG 2019.  
+        Available at: <a href="https://ppig.org/papers/2019-ppig-30th-becker/" target="_blank">https://ppig.org/papers/2019-ppig-30th-becker/</a>
+    </li>
 
-        <h3 id="conclusions">Conclusions</h3>
-        <div class="section">
-            Language barriers have an influence on how non-native speakers (NNES) understand terms/terminology, interpret error messages, participate in class and move from oral to written programming using text-based coding. The reasons behind this are structural, i.e., due to the dominant position of English within programming communities, not due to learner's inadequacies. To provide adequate support, one needs to design learning environment taking into account dual cognitive burden of language and technology. Methods like terminology scaffolding, bilingual materials or linguistically accessible interfaces could reduce cognitive burden and improve understanding, but also classrooms where multilingualism is normalized will give NNES students confidence to ask questions when they need help. Thus, improving linguistic accessibility of computing education has a positive impact for all learners and supports development of a more inclusive global computing education.
-        </div>
+    <li id="ref-espinal">
+        Espinal, A. et al. (2023) ‘Student ability and difficulties with transfer’, <em>Computer Science Education</em>.  
+        DOI: <a href="https://doi.org/10.1080/08993408.2022.2079867" target="_blank">https://doi.org/10.1080/08993408.2022.2079867</a>
+    </li>
 
-    </div>
+    <li id="ref-guo">
+        Guo, P. (2018) ‘Non-Native English Speakers Learning Computer Programming’, CHI 2018.  
+        DOI: <a href="https://doi.org/10.1145/3173574.3173970" target="_blank">https://doi.org/10.1145/3173574.3173970</a>
+    </li>
 
-    <hr>
+    <li id="ref-prather">
+        Prather, J. et al. (2017) ‘Students’ Natural Language Use in Programming’, SIGCSE ’17.  
+        DOI: <a href="https://doi.org/10.1145/3017680.3017769" target="_blank">https://doi.org/10.1145/3017680.3017769</a>
+    </li>
 
-    <!-- REFERENCES -->
-    <h3 id="references">References</h3>
-    <ol class="reference-list">
-        <li>Alaofi, S.A. (2025). <em>Investigating the impact of English proficiency and terminology knowledge on programming performance in introductory programming courses</em>. University College Dublin. :contentReference[oaicite:0]{index=0}</li>
-        <li>Becker, B.A. (2019). Parlez-vous Java? Bonjour La Monde != Hello World: Barriers to Programming Language Acquisition for Non-Native English Speakers. <em>PPIG 2019</em>. :contentReference[oaicite:1]{index=1}</li>
-        <li>Espinal, A. et al. (2023). Student ability and difficulties with transfer from a block-based programming language into other programming languages. <em>Computer Science Education</em>. :contentReference[oaicite:2]{index=2}</li>
-        <li>Guo, P.J. (2018). Non-Native English Speakers Learning Computer Programming. <em>CHI 2018</em>. :contentReference[oaicite:3]{index=3}</li>
-        <li>Lye, S.Y. & Koh, J.H.L. (2014). Review on Teaching and Learning of Computational Thinking. <em>Computers in Human Behavior</em>.</li>
-        <li>Prather, J. et al. (2017). Students’ Natural Language Use in Programming. <em>SIGCSE ’17</em>.</li>
-    </ol>
+</ol>
+
+</main>
+
+</body>
+</html>
+
 
    <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
